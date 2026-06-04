@@ -1,0 +1,122 @@
+/* Configurações Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fbfbfb;
+}
+
+/* Menu Superior */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff00d4; /* O seu Rosa Choque icônico */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: #ff00d4;
+}
+
+/* Banner Principal */
+.banner {
+    width: 100%;
+    height: 350px;
+    background-image: url('https://images.unsplash.com/photo-1541599540903-216a46ca1df0?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    background-color: rgba(255, 0, 212, 0.4); /* Fundo rosa transparente */
+    padding: 10px 30px;
+    border-radius: 8px;
+}
+
+/* Seções de Serviços */
+.servicos-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.servicos-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.grid-servicos {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 6px 18px rgba(255, 0, 212, 0.06);
+    border-top: 5px solid #ff00d4;
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h3 {
+    color: #111;
+    margin-top: 0;
+}
+
+section p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer strong {
+    color: white;
+}
