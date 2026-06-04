@@ -2,41 +2,159 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de Estrutura Semântica</title>
+    <style>
+        /* Configurações de Estilo Visual (CSS) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            color: #1f2937;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        /* Seções */
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        /* Grid de Notícias e Produtos */
+        .grid-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Cartões (Articles) */
+        article {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            flex: 1;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid #3b82f6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        article h3 {
+            font-size: 1.3rem;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        article p {
+            color: #4b5563;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Estilo específico para a seção de Produtos */
+        #produtos .grid-container article {
+            border-top-color: #10b981; /* Cor verde para produtos */
+            text-align: center;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>Meu Site</h1>
+        <h1>Meu Site de Notícias</h1>
     </header>
 
     <main>
-        <!-- Section: Agrupa conteúdos relacionados -->
+        <!-- Section: Últimas Notícias atualizadas -->
         <section id="ultimas-noticias">
             <h2>Últimas Notícias</h2>
+            
+            <div class="grid-container">
+                <article>
+                    <h3>GTA 6 quebra recordes no lançamento</h3>
+                    <p>O aguardado jogo da Rockstar Games finalmente chegou ao mercado, superando todas as expectativas de vendas globais e alcançando notas máximas na crítica especializada nas primeiras 24 horas.</p>
+                </article>
 
-            <!-- Article: Conteúdo independente -->
-            <article>
-                <h3>Título da Notícia 1</h3>
-                <p>Conteúdo da notícia...</p>
-            </article>
-
-            <article>
-                <h3>Título da Notícia 2</h3>
-                <p>Conteúdo da notícia...</p>
-            </article>
+                <article>
+                    <h3>IA avança no suporte ao desenvolvimento web</h3>
+                    <p>Novas ferramentas baseadas em inteligência artificial prometem automatizar a criação de layouts responsivos, ajudando desenvolvedores iniciantes a estruturar códigos HTML e CSS de forma mais ágil.</p>
+                </article>
+            </div>
         </section>
 
-        <!-- Outra section para um conteúdo diferente -->
+        <!-- Section: Produtos -->
         <section id="produtos">
-            <h2>Produtos</h2>
-            <article>
-                <h3>Produto A</h3>
-            </article>
+            <h2>Produtos em Destaque</h2>
+            
+            <div class="grid-container">
+                <article>
+                    <h3>PlayStation 6</h3>
+                    <p>A nova geração de consoles com suporte total a resoluções ultra avançadas e carregamento instantâneo.</p>
+                </article>
+                
+                <article>
+                    <h3>Curso Web FullStack</h3>
+                    <p>Aprenda HTML, CSS, JavaScript e as ferramentas mais modernas do mercado para se destacar.</p>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026</p>
+        <p>&copy; 2026 - Desenvolvido em Aula</p>
     </footer>
+
 </body>
 </html>
