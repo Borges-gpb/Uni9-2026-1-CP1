@@ -1,4 +1,4 @@
-/* Configuração Geral do Site */
+/* Configurações Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -7,99 +7,137 @@
 }
 
 body {
-    background-color: #f4f6f9;
+    background-color: #f8f9fa;
     color: #333;
-    line-height: 1.6;
 }
 
-/* Cabeçalho e Menu de Navegação */
+/* Menu Superior */
 header {
     background-color: #ffffff;
-    padding: 20px 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: #d63384; /* Rosa Choque elegante */
+    color: #ff00d4; /* Rosa Choque principal */
 }
 
-nav a {
+header nav a {
     text-decoration: none;
     color: #555;
-    margin-left: 20px;
+    margin-left: 25px;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
-nav a:hover {
-    color: #d63384;
+header nav a:hover {
+    color: #ff00d4;
 }
 
-/* Seção Principal (Banner/Hero) */
-.hero {
+/* Banner Principal / Hero com a Imagem de Patinhas */
+.banner {
+    width: 100%;
+    height: 380px;
+    
+    /* Configuração da imagem de patinhas da image_ebc2ac.png */
+    background-image: url('fundo-patinhas.png');
+    background-repeat: repeat; /* Faz as patinhas preencherem todo o espaço do banner */
+    background-size: 400px;    /* Controla o tamanho do padrão das patinhas */
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #fce4ec 0%, #f1f3f5 100%);
-}
-
-.hero h1 {
-    font-size: 36px;
-    color: #2b2d42;
-    margin-bottom: 10px;
-}
-
-/* Seção de Serviços */
-.servicos-container {
-    max-width: 1000px;
-    margin: 40px auto;
     padding: 0 20px;
+    border-bottom: 5px solid #ff00d4; /* Linha rosa choque inferior */
+}
+
+.banner h1 {
+    font-size: 3.2rem;
+    color: #ff00d4; /* Título em Rosa Choque para destacar no fundo branco */
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco sutil para dar leitura */
+    padding: 12px 35px;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Seções de Serviços (Melhoria: Cards Lado a Lado) */
+.servicos-container {
+    max-width: 1140px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .servicos-container h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #2b2d42;
-    position: relative;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #222;
 }
 
-/* Organização dos Cards de Serviços */
-.service-card {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #d63384; /* Detalhe em rosa na lateral */
+/* Grid para alinhar os cards na horizontal */
+.grid-servicos {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Ajusta para celular jogando os cards para baixo */
 }
 
-.service-card h3 {
-    font-size: 20px;
-    color: #2b2d42;
-    margin-bottom: 10px;
+section {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 25px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-top: 6px solid #ff00d4; /* Detalhe rosa no topo de cada card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Rodapé / Informações de Contato */
-footer {
-    background-color: #ffffff;
-    padding: 30px 20px;
-    margin-top: 50px;
-    border-top: 1px solid #e9ecef;
-    text-align: center;
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 0, 212, 0.15);
 }
 
-footer p {
-    font-weight: bold;
-    color: #2b2d42;
+section h3 {
+    color: #111;
+    font-size: 1.4rem;
     margin-bottom: 15px;
 }
 
-.contato-info {
-    font-size: 14px;
+section p {
     color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Rodapé Organizado */
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+    font-size: 0.95rem;
+    border-top: 4px solid #ff00d4;
+}
+
+footer p {
     margin: 8px 0;
+}
+
+footer strong {
+    color: white;
+    font-size: 1.1rem;
 }
